@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+.container-fluid {
+    min-height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.yellow circle {
+    fill: #f00000;
+}
+
+.yellow rect {
+    fill: #f0f000;
+    stroke: #f00000;
+}
+
+.red circle {
+    fill: #f0f000;
+}
+
+.red rect {
+    fill: #f00000;
+    stroke: #f0f000;
+}
+
+.sum {
+    text-align: center;
+    font-size: 55vmin;
+    user-select: none;
+}
+
+.night {
+    background: black;
+    color: white;
+}
