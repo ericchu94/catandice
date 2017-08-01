@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
   night: boolean = false;
   die1: number = 1;
   die2: number = 6;
@@ -15,9 +14,14 @@ export class AppComponent {
     this.onRandom();
   }
 
-  onRandom(): void {
+  async onRandom(): Promise<void> {
     this.die1 = Math.floor(Math.random() * 6 + 1);
     this.die2 = Math.floor(Math.random() * 6 + 1);
+    for (let i = 0; i < 5; i++) {
+      await (new Promise(resolve => setTimeout(resolve, 50)));
+      this.die1 = Math.floor(Math.random() * 6 + 1);
+      this.die2 = Math.floor(Math.random() * 6 + 1);
+    }
   }
 
   onToggleNight(event): void {
