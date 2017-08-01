@@ -8,9 +8,13 @@ import {
 } from '@angular/animations';
 
 @Component({
-  selector: 'app-root',
+  selector: 'body',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  host: {
+    '[@night]': 'night',
+    '(click)': 'onRoll()'
+  },
   animations: [
     trigger('night', [
       state('true', style({

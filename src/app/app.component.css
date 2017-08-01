@@ -1,0 +1,28 @@
+:host {
+    cursor: pointer;
+}
+
+.yellow circle {
+    fill: #f00000;
+}
+
+.yellow rect {
+    fill: #f0f000;
+    stroke: #f00000;
+}
+
+.red circle {
+    fill: #f0f000;
+}
+
+.red rect {
+    fill: #f00000;
+    stroke: #f0f000;
+}
+
+.sum {
+    text-align: center;
+    font-size: 55vmin;
+    user-select: none;
+    line-height: 1;
+}

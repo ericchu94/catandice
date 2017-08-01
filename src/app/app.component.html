@@ -1,8 +1,8 @@
-<div class="container-fluid" (click)="onRoll()" [@night]="night">
-    <div class="row">
+<div class="container-fluid">
+    <div class="row" [@roll]="rolling" (@roll.done)="onRollDone()">
         <div class="col-sm-3">
             <div class="row">
-                <div class="col-6 col-sm-12 die" [ngClass]="{'red': firstDieRed, 'yellow': !firstDieRed}" [@roll]="rolling">
+                <div class="col-6 col-sm-12 die" [ngClass]="{'red': firstDieRed, 'yellow': !firstDieRed}">
                     <svg *ngIf="die1 == 1" width="100%" viewBox="-5 -5 110 110">
                         <rect x="0" y="0" width="100" height="100" rx="5" ry="5" />
                         <circle cx="50" cy="50" r="10" />
@@ -43,7 +43,7 @@
                         <circle cx="30" cy="20" r="10" />
                     </svg>
                 </div>
-                <div class="col-6 col-sm-12 die" [ngClass]="{'red': !firstDieRed, 'yellow': firstDieRed}" [@roll]="rolling">
+                <div class="col-6 col-sm-12 die" [ngClass]="{'red': !firstDieRed, 'yellow': firstDieRed}">
                     <svg *ngIf="die2 == 1" width="100%" viewBox="-5 -5 110 110">
                         <rect x="0" y="0" width="100" height="100" rx="5" ry="5" />
                         <circle cx="50" cy="50" r="10" />
@@ -86,12 +86,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-9">
-            <div class="row">
-                <div class="col-12 sum text" [@roll]="rolling" (@roll.done)="onRollDone()">
-                    {{ die1 + die2 }}
-                </div>
-            </div>
+        <div class="col-sm-9 sum text">
+            {{ die1 + die2 }}
         </div>
     </div>
     <div class="row">
