@@ -49,6 +49,7 @@ export class AppComponent {
   }
 
   onRoll(): void {
+    this.history.push(this.die1 + this.die2);
     this.rolling = true;
   }
 
@@ -62,6 +63,7 @@ export class AppComponent {
   random(): void {
     this.die1 = Math.floor(Math.random() * 6 + 1);
     this.die2 = Math.floor(Math.random() * 6 + 1);
+    this.firstDieRed = !this.firstDieRed;
   }
 
   onToggleNight(event): void {
