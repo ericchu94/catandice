@@ -3,6 +3,11 @@
     min-height: 100%;
     width: 100%;
     position: absolute;
+    transition: background-color 1s;
+}
+
+.text {
+    transition: color 1s;
 }
 
 .yellow circle {
@@ -30,6 +35,17 @@
 }
 
 .night {
-    background: black;
+    background-color: black;
+}
+
+.night .text  {
     color: white;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.die, .sum {
+    transition: opacity 0.25s;
 }
