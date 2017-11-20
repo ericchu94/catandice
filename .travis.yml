@@ -5,7 +5,7 @@ node_js:
 services:
   - docker
 script:
-  - ng build
+  - ng build -prod
   - docker build -t registry.heroku.com/catandice/web .
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
