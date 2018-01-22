@@ -1,0 +1,4 @@
+*
+!catandice.conf.template
+!dist
+!docker-entrypoint.sh
